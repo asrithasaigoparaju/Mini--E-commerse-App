@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #333;
+}
+
+/* Header */
+
+header {
+    background: #253b80;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Hero Section */
+
+.hero {
+    background: linear-gradient(120deg, #4568dc, #b06ab3);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.shop-btn {
+    background: #ffcc00;
+    color: black;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Products */
+
+.products-section {
+    padding: 50px 8%;
+}
+
+.products-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #253b80;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.add-btn {
+    background: #253b80;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #4059a9;
+}
+
+/* Cart */
+
+.cart-section {
+    display: none;
+    background: white;
+    margin: 30px auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cart-section h2 {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item button {
+    padding: 6px 10px;
+    border: none;
+    background: #253b80;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-item .remove-btn {
+    background: #e53935;
+}
+
+.cart-section h3 {
+    margin: 20px 0;
+}
+
+.checkout-btn,
+.confirm-btn {
+    background: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.close-btn {
+    background: #e53935;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Checkout Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content h3 {
+    margin: 20px 0;
+}
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    background: #253b80;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .products-section {
+        padding: 30px 5%;
+    }
+
+    .cart-item {
+        flex-wrap: wrap;
+    }
+}
